@@ -1,6 +1,6 @@
 .env
 
-files2docker/*
+# files2docker/*
 
 !files2docker/backup/.keep
 !files2docker/databases/.keep
