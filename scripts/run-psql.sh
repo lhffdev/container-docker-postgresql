@@ -1,9 +1,9 @@
 #!/bin/bash
+
 COLOR_RED='\033[1;31m';
 COLOR_YELLOW='\033[1;49;33m';
 COLOR_DARK_GRAY='\033[1;90m';
 COLOR_CLEAN='\033[0m';
-
 
 example() {
   echo -e "${COLOR_DARK_GRAY}=================================="
@@ -11,7 +11,7 @@ example() {
   echo " run-psql.sh <DATABASE_NAME>"
   echo
   echo " example:"
-  echo "   sh /scripts/run-psql.sh my_database"
+  echo "   ./scripts/run-psql.sh my_database"
   echo -e "==================================${COLOR_CLEAN}"
 }
 
@@ -22,5 +22,11 @@ if [ -z $DATABASE_NAME ]; then
   example;
   exit 1;
 fi
+
+echo -e "${COLOR_YELLOW}============================================================================"
+echo "=====  docker exec -it postgresql bash -c 'psql -U postgres $DATABASE_NAME' ====="
+echo "============================================================================"
+
+echo -e "${COLOR_CLEAN}"
 
 docker exec -it postgresql bash -c "psql -U postgres $DATABASE_NAME"
