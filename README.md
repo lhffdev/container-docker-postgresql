@@ -22,6 +22,7 @@ Para clonar o projeto da imagem Docker do postgreSQL, escolha o local que deseja
 
 ```
 git clone git@github.com:lhffdev/container-docker-postgresql.git
+git checkout gove
 ```
 
 Navegue até a raiz do projeto, crie uma cópia do arquivo  `.env.sample`  para o mesmo diretório com o nome `.env` para configurarmos as variáveis de ambiente do container.
