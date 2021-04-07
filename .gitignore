@@ -2,6 +2,7 @@
 
 files2docker/*
 
+!files2docker/scripts
 !files2docker/backup/.keep
 !files2docker/databases/.keep
 !files2docker/postgresql.conf
